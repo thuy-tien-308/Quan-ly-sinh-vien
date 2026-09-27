@@ -1,0 +1,115 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sinh viên</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>QUẢN LÝ SINH VIÊN</h1>
+        <p class="subtitle">Nhập điểm và xếp loại học tập</p>
+
+        <form id="studentForm">
+
+            <div class="form-group">
+                <label for="studentName">Tên sinh viên</label>
+                <input type="text" id="studentName"
+                       placeholder="Nhập tên sinh viên">
+            </div>
+
+            <div class="subjects">
+
+                <div class="form-group">
+                    <label for="score1">1. Giải tích 1</label>
+                    <input type="number" id="score1"
+                           min="0" max="10" step="0.1"
+                           placeholder="0 - 10">
+                </div>
+
+                <div class="form-group">
+                    <label for="score2">2. Đại số tuyến tính</label>
+                    <input type="number" id="score2"
+                           min="0" max="10" step="0.1"
+                           placeholder="0 - 10">
+                </div>
+
+                <div class="form-group">
+                    <label for="score3">3. Xác suất thống kê</label>
+                    <input type="number" id="score3"
+                           min="0" max="10" step="0.1"
+                           placeholder="0 - 10">
+                </div>
+
+                <div class="form-group">
+                    <label for="score4">4. Tin học đại cương</label>
+                    <input type="number" id="score4"
+                           min="0" max="10" step="0.1"
+                           placeholder="0 - 10">
+                </div>
+
+                <div class="form-group">
+                    <label for="score5">5. Xây dựng ứng dụng Web</label>
+                    <input type="number" id="score5"
+                           min="0" max="10" step="0.1"
+                           placeholder="0 - 10">
+                </div>
+
+            </div>
+
+            <p id="error" class="error"></p>
+
+            <button type="submit">Tính kết quả</button>
+
+        </form>
+
+        <!-- Kết quả -->
+        <div id="result" class="result hidden">
+
+            <h2>KẾT QUẢ HỌC TẬP</h2>
+
+            <p>
+                <strong>Sinh viên:</strong>
+                <span id="resultName"></span>
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Môn học</th>
+                        <th>Điểm</th>
+                    </tr>
+                </thead>
+
+                <tbody id="scoreTable">
+                </tbody>
+            </table>
+
+            <div class="summary">
+                <p>
+                    <strong>Điểm trung bình:</strong>
+                    <span id="average"></span>
+                </p>
+
+                <p>
+                    <strong>Xếp loại:</strong>
+                    <span id="classification"></span>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
