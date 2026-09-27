@@ -114,4 +114,3 @@ document.getElementById("studentForm").addEventListener("submit", function(event
     // Hiển thị khu vực kết quả
     document.getElementById("result").classList.remove("hidden");
 });
-```
