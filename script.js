@@ -1,4 +1,3 @@
-```javascript
 // Tính điểm trung bình
 function calculateAverage(scores) {
     let sum = 0;
